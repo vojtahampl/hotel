@@ -39,7 +39,7 @@ public class Main {
         druhy = new Booking(2, jedna, dva, pokojTri, LocalDate.of(2021, 9, 1), LocalDate.of(2021, 9, 14), Boolean.TRUE);
         System.out.println("První rezervace začíná: "+prvni.getStartDate()+" a druhá rezervace začíná: "+druhy.getStartDate());
         System.out.println("První rezervaci si udělal/a: "+prvni.getGuest()+" a druhou rezervace si udělal/a: "+druhy.getGuest());
-        System.out.println("První rezervace je na pokoji typu: "+prvni.getRoom()+" a druhá rezervace je na pokoji typu: "+druhy.getRoom());
-        System.out.println("První rezervace stojí na noc: "+prvni.getRoom()+",- Kč"+" a druhá rezervace stojí na noc: "+druhy.getRoom()+",- Kč");
+        System.out.println("První rezervace je na pokoji typu: "+prvni.getRoom().getRoomType()+" a druhá rezervace je na pokoji typu: "+druhy.getRoom().getRoomType());
+        System.out.println("První rezervace stojí na noc: "+prvni.getRoom().getPricePerNight()+",- Kč"+" a druhá rezervace stojí na noc: "+druhy.getRoom().getPricePerNight()+",- Kč");
     }
     }
