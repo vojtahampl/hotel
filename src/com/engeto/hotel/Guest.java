@@ -1,10 +1,10 @@
-package engeto.hotel.Guest;
+package com.engeto.hotel;
 
 import java.time.LocalDate;
 
 public class Guest {
     ///region Atributy
-    public int Id;
+    public int guestId;
     public String jmeno;
     public String prijmeni;
     public LocalDate datumNarozeni;
@@ -13,8 +13,8 @@ public class Guest {
 
     ///region Konstruktory
 
-    public Guest() {
-        setId(++1);
+    public Guest(int guestId, String jmeno, String prijmeni, LocalDate datumNarozeni) {
+        this.guestId = guestId;
         this.jmeno = jmeno;
         this.prijmeni = prijmeni;
         this.datumNarozeni = datumNarozeni;
@@ -23,12 +23,12 @@ public class Guest {
     ///endregion
 
     ///region Pristupy
-    public int getId() {
-        return Id;
+    public int getGuestId() {
+        return guestId;
     }
 
-    public void setId(int id) {
-        Id = id;
+    public void setGuestId(int guestId) {
+        this.guestId = guestId;
     }
 
     public String getJmeno() {
@@ -55,5 +55,8 @@ public class Guest {
         this.datumNarozeni = datumNarozeni;
     }
 
+    public String getDescription() {
+        return jmeno+" "+prijmeni+ " "+datumNarozeni+".";
+    }
     ///endregion
 }

@@ -1,22 +1,24 @@
-import java.math.BigDecimal;
+package com.engeto.hotel;
 
 public class Room {
     ///Atributy
-    public int Id;
+    public int roomId;
     public int roomNumber;
     public int numberOfBeds;
+    public String roomType;
     public Boolean balcony;
     public Boolean seaView;
-    public BigDecimal pricePerNight;
+    public Double pricePerNight;
 
     ///endregion
 
     /// Konstruktory
 
-    public Room(int Id, int roomNumber, int numberOfBeds, Boolean balcony, Boolean seaView, BigDecimal pricePerNight) {
-        this.Id = Id;
+    public Room(int roomId, int roomNumber, int numberOfBeds, String roomType, Boolean balcony, Boolean seaView, Double pricePerNight) {
+        this.roomId = roomId;
         this.roomNumber = roomNumber;
         this.numberOfBeds = numberOfBeds;
+        this.roomType = roomType;
         this.balcony = balcony;
         this.seaView = seaView;
         this.pricePerNight = pricePerNight;
@@ -25,12 +27,12 @@ public class Room {
 
     /// Přístupy
 
-    public int getId() {
-        return Id;
+    public int getRoomId() {
+        return roomId;
     }
 
-    public void setId(int id) {
-        Id = id;
+    public void setRoomId(int roomId) {
+        this.roomId = roomId;
     }
 
     public int getRoomNumber() {
@@ -49,6 +51,14 @@ public class Room {
         this.numberOfBeds = numberOfBeds;
     }
 
+    public String getRoomType() {
+        return roomType;
+    }
+
+    public void setRoomType(String roomType) {
+        this.roomType = roomType;
+    }
+
     public Boolean getBalcony() {
         return balcony;
     }
@@ -65,11 +75,11 @@ public class Room {
         this.seaView = seaView;
     }
 
-    public BigDecimal getPricePerNight() {
+    public Double getPricePerNight() {
         return pricePerNight;
     }
 
-    public void setPricePerNight(BigDecimal pricePerNight) {
+    public void setPricePerNight(Double pricePerNight) {
         this.pricePerNight = pricePerNight;
     }
 
