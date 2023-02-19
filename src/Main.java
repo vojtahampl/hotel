@@ -41,8 +41,5 @@ public class Main {
         System.out.println("První rezervaci si udělal/a: "+prvni.getGuest()+" a druhou rezervace si udělal/a: "+druhy.getGuest());
         System.out.println("První rezervace je na pokoji typu: "+prvni.getRoom()+" a druhá rezervace je na pokoji typu: "+druhy.getRoom());
         System.out.println("První rezervace stojí na noc: "+prvni.getRoom()+",- Kč"+" a druhá rezervace stojí na noc: "+druhy.getRoom()+",- Kč");
-
-//      System.out.println(Booking.getListOfBookings);
-
     }
     }
