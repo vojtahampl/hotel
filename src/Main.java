@@ -41,8 +41,8 @@ public class Main {
         }
         for (Booking ListOfBookings : bookingList)
 
-            System.out.println("Den startu rezervace je: " + ListOfBookings.getStartDate()+"Den konce rezervace je: " + ListOfBookings.getEndDate()
-                    +"Rezervace je na udělána na hosta: " + ListOfBookings.getGuest().getDescription()+"Rezervovaný pokoj je: " + ListOfBookings.getRoom().getDescription());
+            System.out.println("Den startu rezervace je: " + ListOfBookings.getStartDate()+" Den konce rezervace je: " + ListOfBookings.getEndDate()
+                    +" Rezervace je na udělána na hosta: " + ListOfBookings.getGuest().getDescription()+" Rezervovaný pokoj je: " + ListOfBookings.getRoom().getDescription());
 
     }
     }
