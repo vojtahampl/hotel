@@ -1,6 +1,5 @@
 import com.engeto.hotel.Booking;
 import com.engeto.hotel.Guest;
-import com.engeto.hotel.ListOfBookings;
 import com.engeto.hotel.Room;
 
 import java.time.LocalDate;

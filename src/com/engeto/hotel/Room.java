@@ -84,9 +84,9 @@ public class Room {
     }
 
     public String getDescription() {
-        return "Číslo pokoje: "+roomNumber+", typ pokoje: "+roomType+", jeho cena je: "+pricePerNight+".";
+        return "Číslo pokoje: " + roomNumber + ", typ pokoje: " + roomType + ", jeho cena je: " + pricePerNight + ".";
 
-
+    }
     ///endregion
 
-}}
+}
