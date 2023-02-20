@@ -4,6 +4,8 @@ import com.engeto.hotel.ListOfBookings;
 import com.engeto.hotel.Room;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class Main {
@@ -22,24 +24,26 @@ public class Main {
         System.out.println("Máme dostupné tyto pokoje: "+pokojJedna.roomType+", "+pokojDva.roomType+", "+pokojTri.roomType+".");
         System.out.println("Cena za jednolůžko je: "+pokojJedna.pricePerNight+" a cena za trojlůžko je: "+pokojTri.pricePerNight);
 
-//        ArrayList<Booking> listOfBookings= new ArrayList<>();
-//      {
-//        listOfBookings.add(new Booking(1, jedna, null, pokojJedna, LocalDate.of(2021, 7, 19), LocalDate.of(2021, 7, 26), Boolean.FALSE));
-//      listOfBookings.add(new Booking(2, jedna, dva, pokojTri, LocalDate.of(2021, 9, 1), LocalDate.of(2021, 9, 14), Boolean.TRUE));
-//        }
-//        for (int i = 0; i < listOfBookings.size(); i++) {
-//            Booking listOfBookings = listOfBookings.get(i);
-//            System.out.println("Den startu rezervace je: " + listOfBookings.getStartDate());
-//            System.out.println("Den konce rezervace je: " + listOfBookings.getEndDate());
-//            System.out.println("Rezervace je na udělána na hosta: " + listOfBookings.getGuest());
-//            System.out.println("Rezervovaný pokoj je: " + listOfBookings.getRoom());
-
         Booking prvni, druhy;
         prvni = new Booking(1, jedna, null, pokojJedna, LocalDate.of(2021, 7, 19), LocalDate.of(2021, 7, 26), Boolean.FALSE);
-        druhy = new Booking(2, jedna, dva, pokojTri, LocalDate.of(2021, 9, 1), LocalDate.of(2021, 9, 14), Boolean.TRUE);
+        druhy = new Booking(2, dva, jedna, pokojTri, LocalDate.of(2021, 9, 1), LocalDate.of(2021, 9, 14), Boolean.TRUE);
         System.out.println("První rezervace začíná: "+prvni.getStartDate()+" a druhá rezervace začíná: "+druhy.getStartDate());
-        System.out.println("První rezervaci si udělal/a: "+prvni.getGuest()+" a druhou rezervace si udělal/a: "+druhy.getGuest());
+        System.out.println("První rezervaci si udělal/a: "+prvni.getGuest().getJmeno()+" "+ prvni.getGuest().getPrijmeni()+" a druhou rezervace si udělal/a: "+druhy.getGuest().getJmeno()+" "+ druhy.getGuest().getPrijmeni());
         System.out.println("První rezervace je na pokoji typu: "+prvni.getRoom().getRoomType()+" a druhá rezervace je na pokoji typu: "+druhy.getRoom().getRoomType());
         System.out.println("První rezervace stojí na noc: "+prvni.getRoom().getPricePerNight()+",- Kč"+" a druhá rezervace stojí na noc: "+druhy.getRoom().getPricePerNight()+",- Kč");
+
+
+        List<Booking> bookingList;
+        bookingList = new ArrayList<>() {
+        };
+        {
+            bookingList.add(new Booking(1, jedna, null, pokojJedna, LocalDate.of(2021, 7, 19), LocalDate.of(2021, 7, 26), Boolean.FALSE));
+            bookingList.add(new Booking(2, jedna, dva, pokojTri, LocalDate.of(2021, 9, 1), LocalDate.of(2021, 9, 14), Boolean.TRUE));
+        }
+        for (Booking ListOfBookings : bookingList)
+
+            System.out.println("Den startu rezervace je: " + ListOfBookings.getStartDate()+"Den konce rezervace je: " + ListOfBookings.getEndDate()
+                    +"Rezervace je na udělána na hosta: " + ListOfBookings.getGuest().getDescription()+"Rezervovaný pokoj je: " + ListOfBookings.getRoom().getDescription());
+
     }
     }

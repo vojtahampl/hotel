@@ -83,6 +83,10 @@ public class Room {
         this.pricePerNight = pricePerNight;
     }
 
+    public String getDescription() {
+        return "Číslo pokoje: "+roomNumber+", typ pokoje: "+roomType+", jeho cena je: "+pricePerNight+".";
+
+
     ///endregion
 
-}
+}}

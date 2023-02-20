@@ -1,6 +1,4 @@
 package com.engeto.hotel;
-
-
 import java.util.List;
 
 public class ListOfBookings {
