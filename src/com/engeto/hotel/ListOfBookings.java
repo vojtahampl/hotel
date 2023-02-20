@@ -3,14 +3,14 @@ import java.util.List;
 
 public class ListOfBookings {
     ///region Atributy
-    private List<Booking> bookingList;
+    private List<Booking> bookings;
 
     ///endregion
 
     ///region Konstruktory
 
     public ListOfBookings(List<Booking> bookingList) {
-        this.bookingList = bookingList;
+        this.bookings = bookingList;
 
     }
 
@@ -18,11 +18,11 @@ public class ListOfBookings {
 
     ///region Přístupy
     public List<Booking> getBookingList() {
-        return bookingList;
+        return bookings;
     }
 
     public void setBookingList(List<Booking> bookingList) {
-        this.bookingList = bookingList;
+        this.bookings = bookingList;
     }
 
     ///endregion

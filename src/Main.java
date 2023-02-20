@@ -45,10 +45,11 @@ public class Main {
             bookingList.add(new Booking(1, jedna, null, pokojJedna, LocalDate.of(2021, 7, 19), LocalDate.of(2021, 7, 26), Boolean.FALSE));
             bookingList.add(new Booking(2, jedna, dva, pokojTri, LocalDate.of(2021, 9, 1), LocalDate.of(2021, 9, 14), Boolean.TRUE));
         }
-        for (Booking ListOfBookings : bookingList)
+        for (Booking bookings : bookingList)
             //Výpis seznamu rezervací
-            System.out.println("Den startu rezervace je: " + ListOfBookings.getStartDate()+" Den konce rezervace je: " + ListOfBookings.getEndDate()
-                    +" Rezervace je na udělána na hosta: " + ListOfBookings.getGuest().getDescription()+" Rezervovaný pokoj je: " + ListOfBookings.getRoom().getDescription());
+            System.out.println("Den startu rezervace je: " + bookings.getStartDate()+" Den konce rezervace je: " + bookings.getEndDate()
+                    +" Rezervace je na udělána na hosta: " + bookings.getGuest().getDescription()+" Rezervovaný pokoj je: " + bookings.getRoom().getDescription());
+
 
     }
     }
